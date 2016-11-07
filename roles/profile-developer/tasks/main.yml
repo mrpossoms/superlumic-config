@@ -7,16 +7,14 @@
   homebrew: name={{item}} state=latest
   with_items:
     - wget
-    - pwgen
-    - xmlstarlet
-    - htop
-    - watch
     - rsync
+    - postgres
+    - mongodb
 
 - name: install developer cask applications
   homebrew_cask: name={{item}} state=present
   with_items:
-    - phpstorm
-    - webstorm
-    - sequel-pro
-    - java
+    - github-desktop
+    - sublime-text
+    
+    
