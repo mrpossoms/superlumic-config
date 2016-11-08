@@ -17,3 +17,4 @@
   homebrew_cask: name={{item}} state=present
   with_items:
     - github-desktop
+    - p4merge
