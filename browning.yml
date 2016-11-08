@@ -26,7 +26,7 @@
     - name: apply global dotfiles
       git: repo=https://github.com/jacebrowning/dotfiles
            dest=~/.dotfiles
-           version=HEAD
+           update=no
     - file: src=~/.dotfiles
             dest=~/Programs/dotfiles
             state=link
@@ -34,7 +34,7 @@
     - name: apply sublime text settings
       git: repo=https://github.com/jacebrowning/sublime-settings
            dest="~/Library/Application Support/Sublime Text 3/Packages/User"
-           version=HEAD
+           update=no
     - file: src="~/Library/Application Support/Sublime Text 3/Packages/User"
             dest=~/Programs/sublime-settings
             state=link
