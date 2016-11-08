@@ -10,6 +10,7 @@
         - zsh
         # - oh-my-zsh
         - z
+
     - name: install personal cask applications
       homebrew_cask: name={{item}} state=present
       with_items:
@@ -18,9 +19,25 @@
         - postico
         - sequel-pro
 
-    - git: repo=https://github.com/jacebrowning/dotfiles
+    - name: set custom shell
+      command: chsh -s /bin/zsh Browning
+      become: true
+
+    - name: apply global dotfiles
+      git: repo=https://github.com/jacebrowning/dotfiles
            dest=~/.dotfiles
            version=HEAD
+    - file: src=~/.dotfiles
+            dest=~/Programs/dotfiles
+            state=link
+    - command: make -C ~/Programs/dotfiles
+    - name: apply sublime text settings
+      git: repo=https://github.com/jacebrowning/sublime-settings
+           dest="~/Library/Application Support/Sublime Text 3/Packages/User"
+           version=HEAD
+    - file: src="~/Library/Application Support/Sublime Text 3/Packages/User"
+            dest=~/Programs/sublime-settings
+            state=link
 
   roles:
     - profile-all
@@ -28,6 +45,5 @@
 
   vars:
     # - computername: "Jace's MacBook Pro"
-    - git_user_name: jacebrowning
+    - git_user_name: Jace Browning
     - git_user_email: jacebrowning@gmail.com
-    
