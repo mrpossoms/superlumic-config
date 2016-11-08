@@ -10,11 +10,10 @@
     - rsync
     - postgres
     - mongodb
+    - graphviz
+    - pandoc
 
 - name: install developer cask applications
   homebrew_cask: name={{item}} state=present
   with_items:
     - github-desktop
-    - sublime-text
-    
-    
