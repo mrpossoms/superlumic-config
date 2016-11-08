@@ -18,6 +18,7 @@
   with_items:
     - github-desktop
     - p4merge
+    - firefox
 
 - name: install pyenv
   homebrew: name=pyenv state=latest
