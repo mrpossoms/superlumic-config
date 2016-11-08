@@ -8,6 +8,7 @@
   with_items:
     - wget
     - rsync
+    - direnv
     - postgres
     - mongodb
     - graphviz
@@ -43,7 +44,7 @@
 - name: rehash pyenv shims
   command: pyenv rehash
 
-- name: install python packages
+- name: install developer python packages
   pip: executable=~/.pyenv/shims/pip
        name={{item.name}}
        version={{item.version}}
@@ -70,7 +71,7 @@
 - name: rehash rbenv shims
   command: rbenv rehash
 
-- name: install ruby packages
+- name: install developer ruby packages
   gem: executable=~/.rbenv/shims/gem
        name={{item.name}}
        version={{item.version}}
