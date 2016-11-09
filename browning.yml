@@ -23,6 +23,11 @@
       command: chsh -s /bin/zsh Browning
       become: true
 
+    - name: link to this configuration code
+      file: src=/usr/local/superlumic/config
+            dest=~/Programs/superlumic-config
+            state=link
+
     - name: apply global dotfiles
       git: repo=https://github.com/jacebrowning/dotfiles
            dest=~/.dotfiles
@@ -31,6 +36,7 @@
             dest=~/Programs/dotfiles
             state=link
     - command: make -C ~/Programs/dotfiles
+
     - name: apply sublime text settings
       git: repo=https://github.com/jacebrowning/sublime-settings
            dest="~/Library/Application Support/Sublime Text 3/Packages/User"
@@ -51,6 +57,5 @@
     - profile-developer
 
   vars:
-    # - computername: "Jace's MacBook Pro"
     - git_user_name: Jace Browning
     - git_user_email: jacebrowning@gmail.com
