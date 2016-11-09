@@ -9,3 +9,34 @@ how I do it. The "profile-all" role are the apps and settings that
 everyone in my company needs. Then I have a group file per type of
 installation (developers, designers, etc). In the "username.yml"
 playbook I then add all the specific things for that user.
+
+## Installation
+
+Clone the repository:
+
+```sh
+$ mkdir -p /usr/local/superlumic
+
+$ cd /usr/local/superlumic
+
+$ git clone https://github.com/jacebrowning/superlumic-config config
+```
+
+Run `superlumic` to install all system dependencies:
+
+```
+$ cd /usr/local/superlumic/config
+
+$ make
+```
+
+## Updates
+
+```
+$ cd ~/Programs/superlumic-config
+
+$ git pull
+
+$ make
+```
+
