@@ -8,6 +8,3 @@
 
 - src: https://github.com/superlumic/ansible-role-cli.git
   name: roderik.superlumic-cli
-
-- src: https://github.com/superlumic/ansible-role-vim.git
-  name: roderik.superlumic-vim

@@ -13,5 +13,4 @@ galaxy_info:
 dependencies:
   - roderik.superlumic-cli
   - roderik.superlumic-homebrew
-  - roderik.superlumic-vim
   - profile-all
