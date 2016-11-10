@@ -18,6 +18,7 @@
         - postico
         - sequel-pro
         - calibre
+        - macpilot
 
     - name: set custom shell
       command: chsh -s /bin/zsh Browning
