@@ -53,6 +53,7 @@
            version={{item.version}}
       with_items:
         - { name: thefuck, version: 3.11 }
+        - { name: mine, version: 1.0 }
 
   roles:
     - profile-all
