@@ -15,8 +15,9 @@
       with_items:
         - dropbox
         - google-drive
-        - postico
         - sequel-pro
+        - postico
+        - robomongo
         - calibre
         - macpilot
 
