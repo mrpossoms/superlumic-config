@@ -7,4 +7,4 @@ os:
 osx_image: xcode7
 
 script:
-  - make
+  - make USER=browning
