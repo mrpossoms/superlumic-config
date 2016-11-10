@@ -10,6 +10,7 @@
     - rsync
     - openjpeg
     - direnv
+    - mysql
     - postgres
     - mongodb
     - graphviz
