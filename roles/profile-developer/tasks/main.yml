@@ -8,6 +8,7 @@
   with_items:
     - wget
     - rsync
+    - openjpeg
     - direnv
     - postgres
     - mongodb
