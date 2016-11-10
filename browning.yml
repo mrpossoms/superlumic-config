@@ -8,7 +8,6 @@
       homebrew: name={{item}} state=latest
       with_items:
         - zsh
-        # - oh-my-zsh
         - z
 
     - name: install personal cask applications
@@ -18,6 +17,7 @@
         - google-drive
         - postico
         - sequel-pro
+        - calibre
 
     - name: set custom shell
       command: chsh -s /bin/zsh Browning
