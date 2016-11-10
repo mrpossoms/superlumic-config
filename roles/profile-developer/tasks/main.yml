@@ -8,11 +8,17 @@
   with_items:
     - wget
     - rsync
+    - pv
+    - jq
     - openjpeg
     - direnv
     - mysql
     - postgres
     - mongodb
+    - memcached
+    - redis
+    - rabbitmq
+    - phantomjs
     - graphviz
     - pandoc
 
