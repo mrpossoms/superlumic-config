@@ -11,6 +11,7 @@
     - pv
     - jq
     - openjpeg
+    - freetype
     - direnv
     - mysql
     - postgres
