@@ -71,13 +71,13 @@
 - name: install ruby versions
   command: rbenv install --skip-existing {{item}}
   with_items:
+    - 2.2.5
     - 2.3.1
 
 - name: set global ruby versions
   copy:
     dest: ~/.rbenv/version
     content: |
-      2.2.5
       2.3.1
 
 - name: rehash rbenv shims
