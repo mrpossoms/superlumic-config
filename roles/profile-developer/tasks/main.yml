@@ -12,6 +12,7 @@
     - jq
     - openjpeg
     - freetype
+    - ffmpeg
     - direnv
     - mysql
     - postgres
