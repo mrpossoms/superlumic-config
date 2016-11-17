@@ -15,8 +15,8 @@ playbook I then add all the specific things for that user.
 Clone the repository:
 
 ```sh
-$ mkdir -p /usr/local/superlumic
-
+$ sudo mkdir -p /usr/local/superlumic
+$ sudo chown ${USER}:staff /usr/local/superlumic
 $ cd /usr/local/superlumic
 
 $ git clone https://github.com/jacebrowning/superlumic-config config
