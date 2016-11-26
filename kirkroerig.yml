@@ -13,16 +13,11 @@
     - name: install personal cask applications
       homebrew_cask: name={{item}} state=present
       with_items:
-        - dropbox
-        - google-drive
         - sequel-pro
         - postico
-        - robomongo
-        - calibre
-        - macpilot
 
     - name: set custom shell
-      command: chsh -s /bin/zsh Browning
+      command: chsh -s /bin/zsh kirkroerig 
       become: true
 
     - name: link to this configuration code
@@ -31,7 +26,7 @@
             state=link
 
     - name: apply global dotfiles
-      git: repo=https://github.com/jacebrowning/dotfiles
+      git: repo=https://github.com/mrpossoms/dotfiles
            dest=~/.dotfiles
            update=no
     - file: src=~/.dotfiles
@@ -60,5 +55,5 @@
     - profile-developer
 
   vars:
-    - git_user_name: Jace Browning
-    - git_user_email: jacebrowning@gmail.com
+    - git_user_name: Kirk Roerig 
+    - git_user_email: mr.possoms@gmail.com
