@@ -17,7 +17,7 @@
         - postico
 
     - name: set custom shell
-      command: chsh -s /bin/zsh kirkroerig 
+      command: chsh -s /bin/zsh kirkroerig
       become: true
 
     - name: link to this configuration code
@@ -28,7 +28,7 @@
     - name: apply global dotfiles
       git: repo=https://github.com/mrpossoms/dotfiles
            dest=~/.dotfiles
-           update=no
+           update=yes
     - command: make -C ~/.dotfiles
 
     - name: apply sublime text settings
@@ -52,5 +52,5 @@
     - profile-developer
 
   vars:
-    - git_user_name: Kirk Roerig 
+    - git_user_name: Kirk Roerig
     - git_user_email: mr.possoms@gmail.com
