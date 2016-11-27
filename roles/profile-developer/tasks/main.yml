@@ -17,6 +17,7 @@
     - postgres
     - mongodb
     - heroku
+    - gmp
 
 - name: install developer cask applications
   homebrew_cask: name={{item}} state=present
@@ -57,7 +58,7 @@
     - { name: cookiecutter, version: 1.4.0 }
     - { name: gitman, version: 1.0.2 }
     - { name: coverage.space, version: 0.6.3 }
-    - { name: gym, version: latest }
+    - { name: gym, version: 0.5.6 }
 
 # rbenv
 
