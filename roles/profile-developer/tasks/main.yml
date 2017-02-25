@@ -36,7 +36,6 @@
   with_items:
     - 2.7.12
     - 3.5.2
-    - 3.6.0b4
 
 - name: set global python versions
   copy:
